@@ -30,8 +30,8 @@ dico_modification = r_patch_commentaire.json()
 
 def content_commentaire(id):
     url = 'https://demo.api-platform.com' + id
-    r_cmt_id = requests.get(url)
-    dico_commid = r_cmt_id.json()
+    r_commentaire_id = requests.get(url)
+    dico_commid = r_commentaire_id.json()
     for k, v in dico_commid.items():
         if k == 'body':
             return v
